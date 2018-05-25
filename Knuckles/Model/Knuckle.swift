@@ -15,6 +15,3 @@ class Knuckle {
         self.number = number
     }
 }
-
-
-let knuckle = Knuckle(5)

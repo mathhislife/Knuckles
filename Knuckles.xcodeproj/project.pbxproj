@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3983119AB536A26D558637B1 /* Pods_Knuckles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB112B86B5970A3F248F680 /* Pods_Knuckles.framework */; };
 		C784795220B4A36F0031BF31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784795120B4A36F0031BF31 /* AppDelegate.swift */; };
 		C784795420B4A36F0031BF31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784795320B4A36F0031BF31 /* ViewController.swift */; };
 		C784795720B4A36F0031BF31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C784795520B4A36F0031BF31 /* Main.storyboard */; };
 		C784795920B4A3700031BF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C784795820B4A3700031BF31 /* Assets.xcassets */; };
 		C784795C20B4A3700031BF31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C784795A20B4A3700031BF31 /* LaunchScreen.storyboard */; };
-		C784796820B4A3860031BF31 /* KnuckleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784796420B4A3860031BF31 /* KnuckleView.swift */; };
 		C784796920B4A3860031BF31 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784796620B4A3860031BF31 /* Box.swift */; };
 		C784796A20B4A3860031BF31 /* Knuckle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784796720B4A3860031BF31 /* Knuckle.swift */; };
+		C784796E20B74D6B0031BF31 /* KnucklesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784796D20B74D6B0031BF31 /* KnucklesGame.swift */; };
+		C784797020B77D450031BF31 /* KnuckleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784796F20B77D450031BF31 /* KnuckleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DEBCB732E4E0EE652838A09 /* Pods-Knuckles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knuckles.release.xcconfig"; path = "Pods/Target Support Files/Pods-Knuckles/Pods-Knuckles.release.xcconfig"; sourceTree = "<group>"; };
+		6AB112B86B5970A3F248F680 /* Pods_Knuckles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Knuckles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		913B64BAAEBA43904348154E /* Pods-Knuckles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knuckles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Knuckles/Pods-Knuckles.debug.xcconfig"; sourceTree = "<group>"; };
 		C784794E20B4A36F0031BF31 /* Knuckles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knuckles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C784795120B4A36F0031BF31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C784795320B4A36F0031BF31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,9 +30,10 @@
 		C784795820B4A3700031BF31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C784795B20B4A3700031BF31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C784795D20B4A3700031BF31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C784796420B4A3860031BF31 /* KnuckleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnuckleView.swift; sourceTree = "<group>"; };
 		C784796620B4A3860031BF31 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		C784796720B4A3860031BF31 /* Knuckle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knuckle.swift; sourceTree = "<group>"; };
+		C784796D20B74D6B0031BF31 /* KnucklesGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnucklesGame.swift; sourceTree = "<group>"; };
+		C784796F20B77D450031BF31 /* KnuckleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnuckleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3983119AB536A26D558637B1 /* Pods_Knuckles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08A7754077CB2CEB80078EDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AB112B86B5970A3F248F680 /* Pods_Knuckles.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C784794520B4A36F0031BF31 = {
 			isa = PBXGroup;
 			children = (
 				C784795020B4A36F0031BF31 /* Knuckles */,
 				C784794F20B4A36F0031BF31 /* Products */,
+				D9FFDDE0E0C383B16D6C38A4 /* Pods */,
+				08A7754077CB2CEB80078EDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,7 +92,7 @@
 		C784796320B4A3860031BF31 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C784796420B4A3860031BF31 /* KnuckleView.swift */,
+				C784796F20B77D450031BF31 /* KnuckleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -83,10 +100,20 @@
 		C784796520B4A3860031BF31 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C784796620B4A3860031BF31 /* Box.swift */,
 				C784796720B4A3860031BF31 /* Knuckle.swift */,
+				C784796620B4A3860031BF31 /* Box.swift */,
+				C784796D20B74D6B0031BF31 /* KnucklesGame.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D9FFDDE0E0C383B16D6C38A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				913B64BAAEBA43904348154E /* Pods-Knuckles.debug.xcconfig */,
+				0DEBCB732E4E0EE652838A09 /* Pods-Knuckles.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C784796020B4A3700031BF31 /* Build configuration list for PBXNativeTarget "Knuckles" */;
 			buildPhases = (
+				570B4650A394D130CF40B3E1 /* [CP] Check Pods Manifest.lock */,
 				C784794A20B4A36F0031BF31 /* Sources */,
 				C784794B20B4A36F0031BF31 /* Frameworks */,
 				C784794C20B4A36F0031BF31 /* Resources */,
+				E5AA57D990EE095016343768 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,16 +184,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		570B4650A394D130CF40B3E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Knuckles-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5AA57D990EE095016343768 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Knuckles/Pods-Knuckles-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Knuckles/Pods-Knuckles-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C784794A20B4A36F0031BF31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C784796E20B74D6B0031BF31 /* KnucklesGame.swift in Sources */,
+				C784797020B77D450031BF31 /* KnuckleCell.swift in Sources */,
 				C784795420B4A36F0031BF31 /* ViewController.swift in Sources */,
 				C784796A20B4A3860031BF31 /* Knuckle.swift in Sources */,
 				C784796920B4A3860031BF31 /* Box.swift in Sources */,
 				C784795220B4A36F0031BF31 /* AppDelegate.swift in Sources */,
-				C784796820B4A3860031BF31 /* KnuckleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +375,7 @@
 		};
 		C784796120B4A3700031BF31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913B64BAAEBA43904348154E /* Pods-Knuckles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -324,6 +394,7 @@
 		};
 		C784796220B4A3700031BF31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DEBCB732E4E0EE652838A09 /* Pods-Knuckles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

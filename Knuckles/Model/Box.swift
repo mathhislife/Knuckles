@@ -9,73 +9,38 @@
 import Foundation
 
 class Box {
-    let n = 4
-    let m = 4
-    var knuckles: [Knuckle]
-    private var emptyPositionIndex: Int
+    let rows: Int
+    let columns: Int
+    private var knuckles: [Knuckle?]
     
-    init() {
-        knuckles = [Knuckle]()
-        for i in 0..<n*m {
-            knuckles.append(Knuckle(i))
-        }
-        emptyPositionIndex = 0
-        
-        repeat {
-            knuckles.shuffle()
-        } while !reshuffleIsValid(knuckles: knuckles)
-        
-        for i in 0..<n*m {
-            if knuckles[i].number == 0 {
-                emptyPositionIndex = i
-            }
-        }
+    var size: Int {
+        return rows * columns
     }
     
-    private func reshuffleIsValid(knuckles: [Knuckle]) -> Bool {
-        var inversions = 0
-        for i in 0..<n*m {
-            if knuckles[i].number != 0 {
-                for j in 0..<i {
-                    if knuckles[j].number > knuckles[i].number {
-                        inversions += 1
-                    }
-                }
-            }
+    var emptyCellCoordinate: (row: Int, column: Int) {
+        let index = knuckles.index { $0 == nil }!
+        return (index / rows, index % rows)
+    }
+    
+    var emptyCellIndex: Int {
+        return knuckles.index { $0 == nil }!
+    }
+    
+    init(rows: Int, columns: Int, knuckles: [Knuckle?]) {
+        self.rows = rows
+        self.columns = columns
+        self.knuckles = knuckles
+    }
+    
+    subscript(index: Int) -> Knuckle? {
+        get {
+            return knuckles[index]
         }
-        for i in 0..<n*m {
-            if knuckles[i].number == 0 {
-                inversions += 1 + i / m
-            }
-        }
-        return (inversions & 1) == 0
-    }
-    
-    private func indexIsValid(row: Int, column: Int) -> Bool {
-        return row >= 0 && row < n && column >= 0 && column < m
-    }
-    
-    //MARK: Public methods
-    
-    subscript(row: Int, column: Int) -> Knuckle {
-        assert(indexIsValid(row: row, column: column), "Index out of range")
-        return knuckles[row * m + column]
-    }
-    
-    func pushKnuckleAt(row: Int, column: Int) {
-        assert(indexIsValid(row: row, column: column), "Index out of range")
-        let emptyI = emptyPositionIndex / m
-        let emptyJ = emptyPositionIndex % m
-        
-        let iDifference = abs(row - emptyI)
-        let jDifference = abs(column - emptyJ)
-        if iDifference + jDifference == 1 {
-            knuckles.swapAt(emptyPositionIndex, row + m + column)
-            emptyPositionIndex = row + m + column
+        set {
+            knuckles[index] = newValue
         }
     }
 }
-
 
 extension MutableCollection {
     /// Shuffles the contents of this collection.
